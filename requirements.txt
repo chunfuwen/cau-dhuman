@@ -4,3 +4,6 @@ jieba>=0.42
 edge-tts>=6.1
 openai>=1.30
 pytest>=8.0
+# optional: RAGAS evaluation (needs a real LLM judge)
+ragas>=0.4
+langchain-community==0.4.1

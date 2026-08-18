@@ -105,6 +105,29 @@ cp .env.example .env   # 编辑 .env 填入 DEEPSEEK_API_KEY
 测试覆盖：分词与 BM25 排序、RAG 检索相关性、知识库各端点的数据一致性、
 聊天端点的 RAG 接地回答与 TTS 降级、离线语音合成回退等。
 
+## RAG 评估（RAGAS）
+
+使用 [RAGAS](https://pypi.org/project/ragas) 评估 RAG 管线的检索与生成质量。
+运行 `scripts/evaluate_rag.py` 会：用项目真实的混合检索（BM25 + 稠密向量）
+与 DeepSeek 对一组金标问题作答，再以 DeepSeek 作为评判模型 + 内置多语言
+embedding，计算以下指标并输出报告到 `evals/experiments/ragas_report.json`：
+
+| 指标 | 含义 | 是否需要参考答案 |
+| --- | --- | --- |
+| faithfulness | 回答是否完全基于检索上下文（防幻觉） | 否 |
+| answer_relevancy | 回答是否切题 | 否 |
+| factual_correctness | 回答相对参考答案的事实正确性 | 是 |
+| context_recall | 检索是否覆盖了回答问题所需的全部信息 | 是 |
+| context_precision | 相关片段是否排在检索结果前列 | 是 |
+
+```bash
+.venv/bin/python scripts/evaluate_rag.py
+```
+
+需要配置 `DEEPSEEK_API_KEY`（作为 LLM 评判者）；embedding 复用
+`app/kb/vectorstore` 的模型。默认评估集为 8 条金标问题（含 multimodal.pdf
+的 2 条），可在 `scripts/evaluate_rag.py` 的 `EVAL_SET` 中扩充。
+
 ## 说明
 
 - 知识库为教学演示用途，数据根据公开资料整编；个别导师条目标有「示例」字样，仅作展示。
