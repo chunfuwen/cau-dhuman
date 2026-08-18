@@ -1,0 +1,15 @@
+{
+  "dimension": 384,
+  "chunks": [
+    {
+      "text": "Multimodal Document Demo\nThis PDF contains text, an image, and a table, demonstrating a multimodal document layout. The\nimage below shows a simple bar chart rendered from data, followed by a summary table of the\nsame values.\nEnrollment Summary\nThe chart and table present the same enrollment data for four majors, showing that Food Science\nleads in g",
+      "source": "multimodal.pdf",
+      "page": 1
+    },
+    {
+      "text": "t data for four majors, showing that Food Science\nleads in growth while Biology has the smallest program size.",
+      "source": "multimodal.pdf",
+      "page": 1
+    }
+  ]
+}

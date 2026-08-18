@@ -1,0 +1,6 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+jieba>=0.42
+edge-tts>=6.1
+openai>=1.30
+pytest>=8.0

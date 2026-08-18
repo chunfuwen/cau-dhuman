@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>中国农业大学数字人·农小田</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">CAU</div>
+    <div class="title">
+      <h1>中国农业大学数字人模拟平台</h1>
+      <p>农小田 · 校情智能助手 · DeepSeek LLM + RAG · 语音播报</p>
+    </div>
+    <div class="status">
+      <span id="llm-status" class="pill">连接中…</span>
+      <span id="kb-status" class="pill">知识库 -</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- 数字人舞台 -->
+    <section class="stage">
+      <div class="stage-inner">
+        <canvas id="avatar" width="520" height="560"></canvas>
+        <div class="speech-bubble" id="speech-bubble">
+          <span id="speech-text"></span>
+        </div>
+        <div class="faceplate" id="faceplate">
+          <label class="ctrl">
+            <span>数字人音色</span>
+            <select id="voice-select">
+              <option value="female">女声 · 晓晓</option>
+              <option value="male">男声 · 云扬</option>
+            </select>
+          </label>
+          <label class="ctrl">
+            <input type="checkbox" id="tts-toggle" checked disabled />
+            <span>语音播报</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 对话 -->
+    <section class="chat">
+      <div class="chat-head">
+        <span>与「农小田」对话</span>
+        <span class="hint">可输入文字或点击麦克风说中文</span>
+      </div>
+      <div class="messages" id="messages"></div>
+      <div class="quick" id="quick">
+        <button data-q="介绍一下学校的学院构成">学院构成</button>
+        <button data-q="农学院有哪些专业和主要课程">农学专业</button>
+        <button data-q="动物科技学院的导师和研究方向">导师介绍</button>
+        <button data-q="学校有哪些重点科研成果">科研成就</button>
+        <button data-q="食品学院学什么课程">课程设置</button>
+      </div>
+      <div class="inputbar">
+        <button id="mic-btn" class="mic" title="语音输入">🎙</button>
+        <textarea id="input" rows="1" placeholder="请问农小田…"></textarea>
+        <button id="send-btn" class="send">发送</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">中国农业大学数字人模拟平台 · 知识库基于 RAG 检索 · LLM: DeepSeek · TTS: Edge TTS</footer>
+
+  <script src="/static/avatar.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

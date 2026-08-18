@@ -1,0 +1,9 @@
+# runtime artifacts
+audio/
+app/kb/docs/
+app/kb/kb_index.json
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
