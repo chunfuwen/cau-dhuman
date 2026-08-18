@@ -1,0 +1,77 @@
+{
+  "model": "deepseek-chat",
+  "n_samples": 8,
+  "aggregate": {
+    "faithfulness": 0.7624,
+    "answer_relevancy": 0.9552,
+    "factual_correctness": 0.3875,
+    "context_recall": 0.875,
+    "context_precision": 0.8542
+  },
+  "per_sample": [
+    {
+      "user_input": "中国农业大学是哪一年创建的？",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9981928229891265,
+      "factual_correctness": 0.29,
+      "context_recall": 1.0,
+      "context_precision": 0.99999999995
+    },
+    {
+      "user_input": "中国农业大学目前设有多少个学院？",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9999999999999994,
+      "factual_correctness": 0.4,
+      "context_recall": 1.0,
+      "context_precision": 0.9999999999
+    },
+    {
+      "user_input": "中国农业大学的校训是什么？",
+      "faithfulness": 0.25,
+      "answer_relevancy": 0.9999999999999996,
+      "factual_correctness": 0.5,
+      "context_recall": 1.0,
+      "context_precision": 0.99999999995
+    },
+    {
+      "user_input": "农学院有哪些本科专业？",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9999999999999999,
+      "factual_correctness": 0.29,
+      "context_recall": 1.0,
+      "context_precision": 0.0
+    },
+    {
+      "user_input": "张福锁院士的主要研究方向是什么？",
+      "faithfulness": 0.6470588235294118,
+      "answer_relevancy": 0.9960108009261249,
+      "factual_correctness": 0.86,
+      "context_recall": 1.0,
+      "context_precision": 0.8333333332916666
+    },
+    {
+      "user_input": "中国农业大学在校生规模如何？",
+      "faithfulness": 0.9166666666666666,
+      "answer_relevancy": 0.9843662514976778,
+      "factual_correctness": 0.36,
+      "context_recall": 1.0,
+      "context_precision": 0.9999999999
+    },
+    {
+      "user_input": "Which major shows the strongest enrollment growth in the multimodal document?",
+      "faithfulness": 0.42857142857142855,
+      "answer_relevancy": 0.7026063667910453,
+      "factual_correctness": 0.4,
+      "context_recall": 0.0,
+      "context_precision": 0.99999999995
+    },
+    {
+      "user_input": "What content does the multimodal.pdf document contain?",
+      "faithfulness": 0.8571428571428571,
+      "answer_relevancy": 0.9603399669408019,
+      "factual_correctness": 0.0,
+      "context_recall": 1.0,
+      "context_precision": 0.9999999999
+    }
+  ]
+}
